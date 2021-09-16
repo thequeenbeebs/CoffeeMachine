@@ -31,11 +31,6 @@ resources = {
     "coffee": 100,
 }
 
-# TODO: 5. Process coins.
-# TODO: 6. Check transaction successful.
-# TODO: 7. Make coffee.
-
-
 def enough_resources(coffee_order, cur_resources):
     order = MENU[coffee_order]
     for ingredient in order['ingredients']:
@@ -52,7 +47,7 @@ def transaction_successful(current_money, drink_order):
         return False
     elif current_money > drink_cost:
         change = current_money - drink_cost
-        print(f"Here is ${change} dollars in change.")
+        print(f"Here is ${change:.2f} dollars in change.")
         return True
     else:
         return True
