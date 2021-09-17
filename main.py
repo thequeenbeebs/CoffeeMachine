@@ -1,4 +1,3 @@
-
 MENU = {
     "espresso": {
         "ingredients": {
@@ -30,6 +29,7 @@ resources = {
     "milk": 200,
     "coffee": 100,
 }
+
 
 def enough_resources(coffee_order, cur_resources):
     order = MENU[coffee_order]
@@ -70,9 +70,9 @@ def make_coffee():
         if order == "off":
             turning_off = True
         elif order == "report":
-            print(f"Water: {current_resources['water']} ml")
-            print(f"Milk: {current_resources['milk']} ml")
-            print(f"Coffee: {current_resources['coffee']} g")
+            print(f"Water: {current_resources['water']}ml")
+            print(f"Milk: {current_resources['milk']}ml")
+            print(f"Coffee: {current_resources['coffee']}g")
             print(f"Money: ${machine_money}")
         else:
             if enough_resources(order, current_resources):
